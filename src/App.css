@@ -1,0 +1,85 @@
+@media all and (min-width: 401px) {
+  .contacts {
+    width: 80%;
+    border-collapse: collapse;
+  }
+
+  .contacts th {
+    font-weight: bold;
+    font-size: 13px;
+    padding: 4px;
+    text-align: left;
+    border: 1px solid #ccc;
+  }
+
+  .contacts td {
+    font-size: 15px;
+    padding: 4px;
+    border: 1px solid #ccc;
+  }
+
+  .contacts tr:nth-of-type(2n) {
+    background-color: #efefef;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .contacts, 
+  .contacts thead, 
+  .contacts tbody, 
+  .contacts th, 
+  .contacts td, 
+  .contacts tr { 
+		display: block; 
+	}
+	
+	.contacts thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+  .contacts tr:nth-of-type(2n) {
+    background-color: #efefef;
+  }
+	
+	.contacts tr { 
+    border-top: 1px solid #ccc; 
+  }
+	
+	.contacts td { 
+		border: none;
+		border-bottom: 1px solid #ccc; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	.contacts td:before { 
+		position: absolute;
+		top: 1px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+    font-weight: bold;
+    font-size: 13px;
+    border-right: 1px solid #ccc;
+	}
+	
+	.contacts td:nth-of-type(1):before { 
+    content: "First Name";  
+  }
+
+	.contacts td:nth-of-type(2):before { 
+    content: "Last Name"; 
+  }
+
+	.contacts td:nth-of-type(3):before { 
+    content: "Company Name"; 
+  }
+
+	.contacts td:nth-of-type(4):before { 
+    content: "Phone"; 
+  }
+
+}
